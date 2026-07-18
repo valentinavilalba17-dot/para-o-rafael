@@ -5,7 +5,89 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Nosso Oceano 💙</title>
+/* SEGUNDA CENA - ENVELOPE */
 
+#envelopeTela{
+    position:fixed;
+    inset:0;
+    background:linear-gradient(#06182b,#0b3550);
+    display:none;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    animation:descer 2s;
+}
+
+
+.mar{
+    position:absolute;
+    bottom:0;
+    font-size:120px;
+    opacity:.4;
+}
+
+
+.envelope{
+    width:280px;
+    height:180px;
+    background:white;
+    border-radius:10px;
+    position:relative;
+    box-shadow:0 0 40px rgba(255,255,255,.3);
+    animation:subir 2s;
+}
+
+
+.selo{
+    position:absolute;
+    top:15px;
+    left:50%;
+    transform:translateX(-50%);
+    background:#d9efff;
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:25px;
+}
+
+
+.textoEnvelope{
+    position:absolute;
+    bottom:40px;
+    width:100%;
+    text-align:center;
+    font-size:22px;
+    color:#234;
+}
+
+
+@keyframes descer{
+    from{
+        opacity:0;
+        transform:translateY(-100px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+
+@keyframes subir{
+    from{
+        opacity:0;
+        transform:translateY(100px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
 <style>
 
 *{
@@ -182,7 +264,7 @@ body{
 </div>
 
 
-<button class="botao">
+<button class="botao" onclick="abrirEnvelope()">
 ⛵ Continuar navegando
 </button>
 
@@ -192,6 +274,34 @@ body{
 
 </div>
 
+<div id="envelopeTela">
 
+<div class="mar">
+🌊
+</div>
+
+<div class="envelope">
+
+<div class="selo">
+💙
+</div>
+
+<div class="textoEnvelope">
+Para o meu amor
+</div>
+
+</div>
+<script>
+
+function abrirEnvelope(){
+
+document.querySelector(".cem").style.display="none";
+
+document.getElementById("envelopeTela").style.display="flex";
+
+}
+
+</script>
+</div>
 </body>
 </html>
