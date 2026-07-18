@@ -3,121 +3,195 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nosso 8 meses 💙</title>
+
+<title>Nosso Oceano 💙</title>
 
 <style>
-body {
-    margin: 0;
-    font-family: 'Georgia', serif;
-    background: linear-gradient(#dff3ff, #ffffff);
-    color: #234;
-    text-align: center;
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-.capa {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+body{
+    overflow:hidden;
+    font-family: Georgia, serif;
+    background:#000;
 }
 
-h1 {
-    font-size: 45px;
-    color: #1d5d9b;
+/* CÉU */
+
+.cem{
+    height:100vh;
+    width:100%;
+    background:radial-gradient(circle at center, #10233d 0%, #000 70%);
+    position:relative;
+    overflow:hidden;
 }
 
-h2 {
-    color: #3b82c4;
+/* ESTRELAS */
+
+.estrela{
+    position:absolute;
+    width:3px;
+    height:3px;
+    background:white;
+    border-radius:50%;
+    opacity:0;
+    animation:aparecer 3s forwards;
 }
 
-p {
-    font-size: 20px;
-    line-height: 1.6;
-    padding: 0 25px;
-}
-
-.coracao {
-    font-size: 70px;
-    animation: bater 1s infinite;
-}
-
-@keyframes bater {
-    50% {
-        transform: scale(1.15);
+@keyframes aparecer{
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
     }
 }
 
-button {
-    background: #1d5d9b;
-    color: white;
-    border: none;
-    padding: 15px 30px;
-    border-radius: 30px;
-    font-size: 18px;
-    cursor: pointer;
+
+/* CONTEÚDO */
+
+.conteudo{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    text-align:center;
+    color:white;
 }
 
-#carta {
-    display: none;
-    background: white;
-    margin: 30px;
-    padding: 25px;
-    border-radius: 20px;
-    box-shadow: 0 0 20px #b8dfff;
+
+.data{
+    font-size:28px;
+    opacity:0;
+    animation:entrada 3s forwards;
+    animation-delay:3s;
 }
+
+.frase{
+    margin-top:25px;
+    font-size:20px;
+    max-width:400px;
+    opacity:0;
+    animation:entrada 3s forwards;
+    animation-delay:5s;
+}
+
+
+@keyframes entrada{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+
+/* BARQUINHO */
+
+.barco{
+    font-size:70px;
+    margin-top:50px;
+    opacity:0;
+    animation:
+    entrada 3s forwards,
+    navegar 6s infinite alternate;
+    animation-delay:7s;
+}
+
+
+@keyframes navegar{
+
+    from{
+        transform:translateX(-20px);
+    }
+
+    to{
+        transform:translateX(20px);
+    }
+
+}
+
+
+/* BOTÃO */
+
+.botao{
+
+    margin-top:40px;
+    background:none;
+    border:1px solid white;
+    color:white;
+    padding:15px 35px;
+    border-radius:30px;
+    font-size:18px;
+    cursor:pointer;
+
+    opacity:0;
+    animation:entrada 3s forwards;
+    animation-delay:8s;
+
+}
+
+
 </style>
 
 </head>
 
+
 <body>
 
-<div class="capa">
 
-<div class="coracao">💙</div>
+<div class="cem">
 
-<h1>8 meses de nós</h1>
 
-<h2>Desde 18 de novembro de 2025</h2>
+<!-- estrelas -->
 
-<p>
-No começo era Valentina Vá...  
-mas hoje é muito mais que um nome.  
-É a nossa história, nossas risadas, nossas conversas,
-nossos sonhos e tudo aquilo que Deus está preparando para nós.
-</p>
+<span class="estrela" style="top:20%;left:30%;animation-delay:1s"></span>
 
-<button onclick="abrirCarta()">Abrir nossa cartinha 💌</button>
+<span class="estrela" style="top:40%;left:70%;animation-delay:2s"></span>
 
-<div id="carta">
+<span class="estrela" style="top:15%;left:80%;animation-delay:3s"></span>
 
-<h2>Minha pessoa favorita 💙</h2>
+<span class="estrela" style="top:65%;left:20%;animation-delay:4s"></span>
 
-<p>
-Obrigada por cada momento, por cada cuidado e por fazer
-parte da minha vida. Que esse seja apenas mais um capítulo
-da nossa história.
+<span class="estrela" style="top:75%;left:60%;animation-delay:5s"></span>
 
-Que Deus continue guiando nossos passos e que nunca falte
-amor, fé e alegria entre nós.
 
-Eu amo o que estamos construindo. 🤍
-</p>
+<div class="conteudo">
 
-<p>
-Nossa música: 🎵 Anjos - Venerê/Vai Venus
-</p>
 
-</div>
-
+<div class="data">
+18 de novembro de 2025
 </div>
 
 
-<script>
-function abrirCarta(){
-document.getElementById("carta").style.display="block";
-}
-</script>
+<div class="frase">
+“Foi aqui que Deus começou a escrever nossa história.”
+</div>
+
+
+<div class="barco">
+⛵
+</div>
+
+
+<button class="botao">
+⛵ Continuar navegando
+</button>
+
+
+</div>
+
+
+</div>
+
 
 </body>
 </html>
