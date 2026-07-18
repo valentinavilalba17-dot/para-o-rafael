@@ -6,7 +6,39 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Nosso Oceano 💙</title>
+.carta{
 
+background:white;
+
+color:#234;
+
+width:85%;
+
+max-width:400px;
+
+padding:30px;
+
+border-radius:15px;
+
+box-shadow:0 10px 40px rgba(0,0,0,.3);
+
+font-size:18px;
+
+line-height:1.6;
+
+text-align:center;
+
+animation:entrar 1s;
+
+}
+
+.carta h2{
+
+color:#1d5d9b;
+
+margin-bottom:20px;
+
+}
 <style>
 
 *{
@@ -342,7 +374,20 @@ z-index:5;
 <div id="envelope">
 
 
-<div class="carta-envelope">
+<div class="carta-envelope" onclick="abrirCarta()">
+
+
+<div class="selo">
+💙
+</div>
+
+
+<div class="nome-envelope">
+Para o meu amor
+</div>
+
+
+</div>
 
 
 <div class="selo">
@@ -376,7 +421,36 @@ document.getElementById("ceu").style.display="none";
 document.getElementById("envelope").style.display="flex";
 
 }
+function abrirCarta(){
 
+document.getElementById("envelope").innerHTML = `
+
+<div class="carta">
+
+<h2>Para o meu amor 💙</h2>
+
+<p>
+18 de novembro de 2025 foi o começo de uma história que eu nunca imaginei viver.
+</p>
+
+<p>
+Obrigada por cada momento, cada conversa, cada cuidado e por fazer parte da minha vida.
+</p>
+
+<p>
+Que Deus continue guiando nossos passos e escrevendo nossa história.
+</p>
+
+<p>
+Com amor,<br>
+Valentina 🤍
+</p>
+
+</div>
+
+`;
+
+}
 
 </script>
 
